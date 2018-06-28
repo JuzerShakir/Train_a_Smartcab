@@ -11775,9 +11775,57 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Machine-Learning-Engineer-Nanodegree">Machine Learning Engineer Nanodegree<a class="anchor-link" href="#Machine-Learning-Engineer-Nanodegree">&#182;</a></h1><h2 id="Reinforcement-Learning">Reinforcement Learning<a class="anchor-link" href="#Reinforcement-Learning">&#182;</a></h2><h2 id="Project:-Train-a-Smartcab-to-Drive">Project: Train a Smartcab to Drive<a class="anchor-link" href="#Project:-Train-a-Smartcab-to-Drive">&#182;</a></h2><p>Welcome to the fourth project of the Machine Learning Engineer Nanodegree! In this notebook, template code has already been provided for you to aid in your analysis of the <em>Smartcab</em> and your implemented learning algorithm. You will not need to modify the included code beyond what is requested. There will be questions that you must answer which relate to the project and the visualizations provided in the notebook. Each section where you will answer a question is preceded by a <strong>'Question X'</strong> header. Carefully read each question and provide thorough answers in the following text boxes that begin with <strong>'Answer:'</strong>. Your project submission will be evaluated based on your answers to each of the questions and the implementation you provide in <code>agent.py</code>.</p>
+<h1 id="Machine-Learning-Engineer-Nanodegree">Machine Learning Engineer Nanodegree<a class="anchor-link" href="#Machine-Learning-Engineer-Nanodegree">&#182;</a></h1><h1 id="Project:-Train-a-Smartcab-to-Drive">Project: Train a Smartcab to Drive<a class="anchor-link" href="#Project:-Train-a-Smartcab-to-Drive">&#182;</a></h1><p>Welcome to the fourth project of the Machine Learning Engineer Nanodegree! In this notebook, template code has already been provided for you to aid in your analysis of the <em>Smartcab</em> and your implemented learning algorithm. You will not need to modify the included code beyond what is requested. There will be questions that you must answer which relate to the project and the visualizations provided in the notebook. Each section where you will answer a question is preceded by a <strong>'Question X'</strong> header. Carefully read each question and provide thorough answers in the following text boxes that begin with <strong>'Answer:'</strong>. Your project submission will be evaluated based on your answers to each of the questions and the implementation you provide in <code>agent.py</code>.</p>
 <blockquote><p><strong>Note:</strong> Code and Markdown cells can be executed using the <strong>Shift + Enter</strong> keyboard shortcut. In addition, Markdown cells can be edited by typically double-clicking the cell to enter edit mode.</p>
 </blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h2 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h2><ul>
+<li><a href="#Getting-Started">Getting Started</a></li>
+<li><a href="#Understand-the-World">Understand the World</a><ul>
+<li><a href="#Question-1">Question 1</a></li>
+</ul>
+</li>
+<li><a href="#Understand-the-Code">Understand the Code</a><ul>
+<li><a href="#Question-2">Question 2</a></li>
+</ul>
+</li>
+<li><a href="#Implement-a-Basic-Driving-Agent">Implement a Basic Driving Agent</a><ul>
+<li><a href="#Basic-Agent-Simulation-Results">Basic Agent Simulation Results</a></li>
+<li><a href="#Question-3">Question 3</a></li>
+</ul>
+</li>
+<li><a href="#Inform-the-Driving-Agent">Inform the Driving Agent</a><ul>
+<li><a href="#Identify-States">Identify States</a></li>
+<li><a href="#Question-4">Question 4</a></li>
+<li><a href="#Define-a-State-Space">Define a State Space</a></li>
+<li><a href="#Question-5">Question 5</a></li>
+<li><a href="#Update-the-Driving-Agent-State">Update the Driving Agent State</a></li>
+</ul>
+</li>
+<li><a href="#Implement-a-Q-Learning-Driving-Agent">Implement a Q-Learning Driving Agent</a><ul>
+<li><a href="#Q-Learning-Simulation-Results">Q-Learning Simulation Results</a></li>
+<li><a href="#Question-6">Question 6</a></li>
+</ul>
+</li>
+<li><a href="#Improve-the-Q-Learning-Driving-Agent">Improve the Q-Learning Driving Agent</a><ul>
+<li><a href="#Improved-Q-Learning-Simulation-Results">Improved Q-Learning Simulation Results</a></li>
+<li><a href="#Question-7">Question 7</a></li>
+</ul>
+</li>
+<li><a href="#Define-an-Optimal-Policy">Define an Optimal Policy</a><ul>
+<li><a href="#Question-8">Question 8</a></li>
+</ul>
+</li>
+</ul>
+<hr>
 
 </div>
 </div>
@@ -12231,7 +12279,7 @@ Let's create a table showing types &amp; number of states each feature has:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_default-learning&#39; file from the default Q-Learning simulation</span>
@@ -12361,7 +12409,7 @@ You may also use a decaying function for $\alpha$ (the learning rate) if you so 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -12417,7 +12465,7 @@ You may also use a decaying function for $\alpha$ (the learning rate) if you so 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -12473,7 +12521,7 @@ You may also use a decaying function for $\alpha$ (the learning rate) if you so 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -12529,7 +12577,7 @@ You may also use a decaying function for $\alpha$ (the learning rate) if you so 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -12585,7 +12633,7 @@ You may also use a decaying function for $\alpha$ (the learning rate) if you so 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -12641,7 +12689,7 @@ You may also use a decaying function for $\alpha$ (the learning rate) if you so 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -12697,7 +12745,7 @@ You may also use a decaying function for $\alpha$ (the learning rate) if you so 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -12753,7 +12801,7 @@ You may also use a decaying function for $\alpha$ (the learning rate) if you so 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -12809,7 +12857,7 @@ You may also use a decaying function for $\alpha$ (the learning rate) if you so 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -12865,7 +12913,7 @@ You may also use a decaying function for $\alpha$ (the learning rate) if you so 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -13471,17 +13519,6 @@ You may also use a decaying function for $\alpha$ (the learning rate) if you so 
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p><strong>Note</strong>: Once you have completed all of the code implementations and successfully answered each question above, you may finalize your work by exporting the iPython Notebook as an HTML document. You can do this by using the menu above and navigating to<br>
-<strong>File -&gt; Download as -&gt; HTML (.html)</strong>. Include the finished document along with this notebook as your submission.</p>
-</blockquote>
 
 </div>
 </div>
