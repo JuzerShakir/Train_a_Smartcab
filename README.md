@@ -13,15 +13,15 @@
 - [Definitions](#definitions)<br>
     - [Environment](#environment)<br>
     - [Inputs and Outputs](#inputs-and-outputs)<br>
-    - [Rewards and Goal](#rewads-and-goal)<br>
+    - [Rewards and Goal](#rewards-and-goal)<br>
 - [Data](#data)<br>
     - [Files](#files)<br>
 - [Loading Project](#loading-project)<br>
     - [Requirements](#requirements)<br>
     - [Execution](#execution)<br>
 - [Troubleshooting Pygame](#troubleshooting-pygame)<br>
-    - [Fixing Common Pygame Issues](#ixing-common-pygame-issues)<br>
-    - [Often Problems Reported](#ften-problems-reported)<br>
+    - [Fixing Common Pygame Issues](#fixing-common-pygame-issues)<br>
+    - [Often Problems Reported](#often-problems-reported)<br>
 - [Conclusion](#conclusion)<br>
     - [Evaluation](#evaluation)<br>
     - [Results](#results)
