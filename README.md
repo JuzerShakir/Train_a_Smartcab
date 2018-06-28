@@ -13,15 +13,15 @@
 - [Definitions](#definitions)<br>
     - [Environment](#environment)<br>
     - [Inputs and Outputs](#inputs-and-outputs)<br>
-    - [Rewards and Goal](#rewrds-and-goal)<br>
+    - [Rewards and Goal](#rewads-and-goal)<br>
 - [Data](#data)<br>
     - [Files](#files)<br>
 - [Loading Project](#loading-project)<br>
     - [Requirements](#requirements)<br>
     - [Execution](#execution)<br>
 - [Troubleshooting Pygame](#troubleshooting-pygame)<br>
-    - [Fixing Common Pygame Issues](fixing-common-pygame-issues)<br>
-    - [Often Problems Reported](often-problems-reported)<br>
+    - [Fixing Common Pygame Issues](#ixing-common-pygame-issues)<br>
+    - [Often Problems Reported](#ften-problems-reported)<br>
 - [Conclusion](#conclusion)<br>
     - [Evaluation](#evaluation)<br>
     - [Results](#results)
@@ -157,7 +157,7 @@ _"I'm seeing a black screen when running the code; output says that it can't loa
 
 #### Evaluation
 
-My project was reviewed by a Udacity reviewer against the **<a href="ttps://review.udacity.com/#!/rubrics/106/view" target="_blank"> Train a Smartcab to Drive project rubric.</a>**. All criteria found in the rubric must be *meeting specifications* for me to pass.
+My project was reviewed by a Udacity reviewer against the **<a href="https://review.udacity.com/#!/rubrics/106/view" target="_blank"> Train a Smartcab to Drive project rubric.</a>**. All criteria found in the rubric must be *meeting specifications* for me to pass.
 
 #### Results
 [My Project Review by an Udacity Reviewer]()
