@@ -47,7 +47,7 @@ In this project I have applied reinforcement learning techniques for a self-driv
 The *smartcab* operates in an ideal, grid-like city (similar to New York City), with roads going in the North-South and East-West directions. Other vehicles will certainly be present on the road, but there will be no pedestrians to be concerned with. At each intersection there is a traffic light that either allows traffic in the North-South direction or the East-West direction. U.S. Right-of-Way rules apply: 
 - On a green light, a left turn is permitted if there is no oncoming traffic making a right turn or coming straight through the intersection.
 - On a red light, a right turn is permitted if no oncoming traffic is approaching from your left through the intersection.
-To understand how to correctly yield to oncoming traffic when turning left, you may refer to [this official drivers? education video](https://www.youtube.com/watch?v=TW0Eq2Q-9Ac), or [this passionate exposition](https://www.youtube.com/watch?v=0EdkxI6NeuA).
+To understand how to correctly yield to oncoming traffic when turning left, you may refer to [this official drivers' education video](https://www.youtube.com/watch?v=TW0Eq2Q-9Ac), or [this passionate exposition](https://www.youtube.com/watch?v=0EdkxI6NeuA).
 
 #### Inputs and Outputs
 
@@ -55,7 +55,7 @@ Assume that the *smartcab* is assigned a route plan based on the passengers, sta
 
 #### Rewards and Goal
 
-The *smartcab* will receive positive or negative rewards based on the action it as taken. Expectedly, the *smartcab* will receive a small positive reward when making a good action, and a varying amount of negative reward dependent on the severity of the traffic violation it would have committed. Based on the rewards and penalties the *smartcab* receives, the self-driving agent implementation should learn an optimal policy for driving on the city roads while obeying traffic rules, avoiding accidents, and reaching passengers? destinations in the allotted time
+The *smartcab* will receive positive or negative rewards based on the action it as taken. Expectedly, the *smartcab* will receive a small positive reward when making a good action, and a varying amount of negative reward dependent on the severity of the traffic violation it would have committed. Based on the rewards and penalties the *smartcab* receives, the self-driving agent implementation should learn an optimal policy for driving on the city roads while obeying traffic rules, avoiding accidents, and reaching passengers' destinations in the allotted time
 
 ----
 
@@ -71,9 +71,9 @@ This project contains 6 files and 4 folders:
 - `/smartcab/`: This folder contains the Python scripts that create the environment, graphical user interface, the simulation, and the agents. NO not need to modify or create any files in this directory except for `agent.py` file.
     - `/images/`: This folder contains various images of cars to be used in the graphical user interface. You will not need to modify or create any files in this directory.
      - `agent.py`: This is the main Python file where I have performed my work on the project.
-     - `environment.py`: This Python file will create the *smartcab* environment.(Do not modify)
-     - `planner.py`: This Python file creates a high-level planner for the agent to follow towards a set goal.(Do not modify)
-     - `simulation.py`: This Python file creates the simulation and graphical user interface.(Do not modify)
+     - `environment.py`: This Python file will create the *smartcab* environment. (Do not modify)
+     - `planner.py`: This Python file creates a high-level planner for the agent to follow towards a set goal. (Do not modify)
+     - `simulation.py`: This Python file creates the simulation and graphical user interface. (Do not modify)
 - `export/` : Folder containing HTML file of notebook.   
 
 
@@ -144,7 +144,7 @@ The PyGame library can in some cases require a bit of troubleshooting to work co
 - [Google Group](https://groups.google.com/forum/#!forum/pygame-mirror-on-google-groups)
 - [PyGame subreddit](https://www.reddit.com/r/pygame/)
 
-### Often Problems Reported
+#### Often Problems Reported
 _"PyGame won't install on my machine; there was an issue with the installation."_  
 **Solution:** As has been recommended for this project, it is suggested that you are using the Anaconda distribution of Python, which can then allow you to install PyGame through the `conda`-specific command.
 
