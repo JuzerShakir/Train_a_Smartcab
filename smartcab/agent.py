@@ -8,7 +8,7 @@ class LearningAgent(Agent):
     """ An agent that learns to drive in the Smartcab world.
         This is the object you will be modifying. """ 
 
-    def __init__(self, env, learning=False, epsilon=1.0, alpha=0.1):
+    def __init__(self, env, learning=False, epsilon=1.0, alpha=0.5):
         super(LearningAgent, self).__init__(env)     # Set the agent in the evironment 
         self.planner = RoutePlanner(self.env, self)  # Create a route planner
         self.valid_actions = self.env.valid_actions  # The set of valid actions
@@ -23,6 +23,7 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Set any additional class parameters as needed
+        random.seed(100)
 
 
     def reset(self, destination=None, testing=False):
@@ -43,8 +44,10 @@ class LearningAgent(Agent):
             self.alpha = 0
             self.epsilon = 0
         else:
-            self.epsilon = self.epsilon - 0.001
-
+            #self.epsilon = self.epsilon - 0.01
+            #self.epsilon = self.epsilon - 0.005
+            #self.epsilon = self.epsilon - 0.001
+            self.epsilon -= self.epsilon / 100
         return None
 
     def build_state(self):
@@ -67,7 +70,7 @@ class LearningAgent(Agent):
         # With the hand-engineered features, this learning process gets entirely negated.
         
         # Set 'state' as a tuple of relevant data for the agent        
-        state = (waypoint, inputs['light'], inputs['left'], inputs['right'], inputs['oncoming']) 
+        state = (waypoint, inputs['light'], inputs['left'], inputs['oncoming'])
 
         if self.learning == True:
             if state not in self.Q.keys():
@@ -87,11 +90,11 @@ class LearningAgent(Agent):
 
         maxQ = None
 
-        if state in self.Q:
-            key, value = max(self.Q[state].iteritems(), key=lambda x:x[1])
-            maxQ = key
+        for action in self.Q[state]:
+            if maxQ < self.Q[state][action]:
+                maxQ = self.Q[state][action]
 
-        return maxQ 
+        return maxQ
 
 
     def createQ(self, state):
@@ -129,13 +132,17 @@ class LearningAgent(Agent):
         # When learning, choose a random action with 'epsilon' probability
         # Otherwise, choose an action with the highest Q-value for the current state
         # Be sure that when choosing an action with highest Q-value that you randomly select between actions that "tie".
-        
         if self.learning == False:
             action = random.choice(self.valid_actions)
-        elif self.epsilon > random.random():
+        elif self.epsilon > 0.01 and self.epsilon > random.random():
             action = random.choice(self.valid_actions)
         else:
-            action = self.get_maxQ(state)
+            valid_actions = []
+            maxQ = self.get_maxQ(state)
+            for act in self.Q[state]:
+                if maxQ == self.Q[state][act]:
+                    valid_actions.append(act)
+            action = random.choice(valid_actions)  
 
         return action
 
@@ -150,9 +157,8 @@ class LearningAgent(Agent):
         ###########
         # When learning, implement the value iteration update rule
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
-
         if self.learning:
-            self.Q[state][action] = (1 - self.alpha) * (self.Q[state][action]) + self.alpha * reward
+            self.Q[state][action] = self.Q[state][action] + self.alpha*(reward-self.Q[state][action])
 
         return
 
@@ -189,7 +195,7 @@ def run():
     #   learning   - set to True to force the driving agent to use Q-learning
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
-    agent = env.create_agent(LearningAgent, learning=True)
+    agent = env.create_agent(LearningAgent, learning = True, alpha = 0.2)
     
     ##############
     # Follow the driving agent
@@ -204,14 +210,14 @@ def run():
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env, update_delay=0.01, log_metrics=True, optimized=True, display=False)
+    sim = Simulator(env, update_delay=0.01, display=False, log_metrics=True, optimized=True)
     
     ##############
     # Run the simulator
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=10, tolerance=0.001)
+    sim.run(n_test=10, tolerance=0.008)
 
 
 if __name__ == '__main__':
