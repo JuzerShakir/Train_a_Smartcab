@@ -160,7 +160,7 @@ _"I'm seeing a black screen when running the code; output says that it can't loa
 My project was reviewed by a Udacity reviewer against the **<a href="https://review.udacity.com/#!/rubrics/106/view" target="_blank"> Train a Smartcab to Drive project rubric.</a>**. All criteria found in the rubric must be *meeting specifications* for me to pass.
 
 #### Results
-[My Project Review by an Udacity Reviewer]()
+[My Project Review by an Udacity Reviewer](https://review.udacity.com/#!/reviews/1311739)
 
 **Result after applying Imporved Q-Learning Algorithm**
 
