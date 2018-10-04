@@ -169,6 +169,6 @@ My project was reviewed by a Udacity reviewer against the **<a href="https://rev
 
 **Result after applying Imporved Q-Learning Algorithm**
 
-<p align = 'center'><img src = 'Final_Result.png'></p>
+<p align = 'center'><img src = 'result.png'></p>
 
 ----
