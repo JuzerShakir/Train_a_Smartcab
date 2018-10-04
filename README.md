@@ -2,7 +2,7 @@
 # Reinforcement Learning
 ## Project: Train a Smartcab to Drive
 
-<p align = 'center'><img src = 'smartcab_logo.jpg', height=412, width =512></p>
+<p align = 'center'><img src = 'logo.jpg', height=412, width =512></p>
 
 ----
 
