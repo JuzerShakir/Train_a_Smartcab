@@ -65,7 +65,7 @@ The *smartcab* will receive positive or negative rewards based on the action it 
 
 This project contains 6 files and 4 folders:
 
-- `smartcab.ipynb`: This is the main file where I have performed my work on the project.
+- `report.ipynb`: This is the main file where I have performed my work on the project.
 - `visuals.py`: This Python script provides supplementary visualizations for the Analysis.
 - `/logs/`: This folder will contain all log files that are given from the simulation when specific prerequisites are met.
 - `/smartcab/`: This folder contains the Python scripts that create the environment, graphical user interface, the simulation, and the agents. NO not need to modify or create any files in this directory except for `agent.py` file.
@@ -124,11 +124,11 @@ This will run the `agent.py` file and execute your agent code.
 **AND**
 
 ```bash
-ipython notebook customer_segments.ipynb
+ipython notebook report.ipynb
 ```  
 or
 ```bash
-jupyter notebook customer_segments.ipynb
+jupyter notebook report.ipynb
 ```
 
 This will open the Jupyter/iPython Notebook software and project file in your browser.
