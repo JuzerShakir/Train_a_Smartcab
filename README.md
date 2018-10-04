@@ -75,6 +75,7 @@ This project contains 6 files and 4 folders:
      - `planner.py`: This Python file creates a high-level planner for the agent to follow towards a set goal. (Do not modify)
      - `simulation.py`: This Python file creates the simulation and graphical user interface. (Do not modify)
 - `export/` : Folder containing HTML file of notebook.   
+- `plots/` : Contains images of all the plots that are displayed in `report.ipynb` file.
 
 
 Template code is provided in the `smartcab/agent.py` python file. Additional supporting python code can be found in `smartcab/enviroment.py`, `smartcab/planner.py`, and `smartcab/simulator.py`. Supporting images for the graphical user interface can be found in the `images` folder. While some code has already been implemented, I have implement additional functionality for the `LearningAgent` class in `agent.py` when requested to successfully complete the project. 
